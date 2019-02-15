@@ -10,7 +10,7 @@ from goods.models import Goods
 from . import models
 
 
-# 首页——赵嘉宁
+# 首页
 def index(request, store_id):
     """
     店铺首页展示
@@ -32,7 +32,7 @@ def index(request, store_id):
     return render(request, 'stores/index1.html', {'store': store})
 
 
-# 首页——赵嘉宁
+# 首页
 @login_required
 @transaction.atomic
 def add_store(request):
@@ -60,7 +60,7 @@ def add_store(request):
         return redirect('/stores/index/0/')
 
 
-# 删除店铺——赵嘉宁
+# 删除店铺
 @login_required
 @transaction.atomic
 def del_store(request, store_id):
@@ -75,7 +75,7 @@ def del_store(request, store_id):
     return redirect('/shopsite/index/')
 
 
-# 修改店铺——赵嘉宁
+# 修改店铺
 @login_required
 @transaction.atomic
 def update_store(request, store_id):
@@ -106,7 +106,7 @@ def update_store(request, store_id):
         # return render(request, 'stores/index1.html', {'msg': "店铺信息修改成功", 'store': store})
         return redirect('/stores/index/0/')
 
-# 店铺营业——赵嘉宁
+# 店铺营业
 @login_required
 @transaction.atomic
 def open_store(request, store_id):
@@ -121,7 +121,7 @@ def open_store(request, store_id):
     # return render(request, 'stores/index1.html', {'msg': '店铺开始营业了', 'store': store})
     return redirect('/stores/index/0/')
 
-# 店铺歇业——赵嘉宁
+# 店铺歇业
 @login_required
 @transaction.atomic
 def close_store(request, store_id):
@@ -138,7 +138,7 @@ def close_store(request, store_id):
     return redirect('/stores/index/0/')
 
 
-# 更换店铺封面——赵嘉宁
+# 更换店铺封面
 @login_required
 @transaction.atomic
 def update_cover(request, store_id):
