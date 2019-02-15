@@ -13,7 +13,7 @@ from shopsite.models import ShopCart
 
 # Create your views here.
 
-# 商品品牌的添加——王兴华
+# 商品品牌的添加
 @login_required
 @transaction.atomic
 def add_goods_type(request):
@@ -35,7 +35,7 @@ def add_goods_type(request):
         return redirect('/stores/index/0/')
 
 
-# 商品添加——柴润墨
+# 商品添加
 @login_required
 @transaction.atomic
 def add_good(request, store_id):
@@ -66,7 +66,7 @@ def add_good(request, store_id):
         # return render(request, 'stores/index1.html', {'store': store})
         return redirect('/stores/index/0/')
 
-# 商品的修改——柴润墨
+# 商品的修改
 @login_required
 @transaction.atomic
 def update_good(request, good_id):
@@ -99,7 +99,7 @@ def update_good(request, good_id):
         # return render(request, 'stores/index1.html', {'store': good.store})
         return redirect('/stores/index/0/')
 
-# 商品的隐藏——王兴华
+# 商品的隐藏
 @login_required
 @transaction.atomic
 def lower_good(request, good_id):
@@ -117,7 +117,7 @@ def lower_good(request, good_id):
     # return render(request, 'stores/index1.html', {'store': good.store})
     return redirect('/stores/index/0/')
 
-# 商品的信息——王兴华
+# 商品的信息
 def good_show(request, good_id):
     """
     展示商品信息
@@ -131,7 +131,7 @@ def good_show(request, good_id):
     return render(request, 'goods/good_show.html', {'good': good})
 
 
-# 添加购物车——刘金周
+# 添加购物车
 @login_required
 @transaction.atomic
 def shop_good(request, count, good_id):
@@ -167,7 +167,7 @@ def shop_good(request, count, good_id):
     return redirect("/goods/good_show/"+str(good.id)+'/')
 
 
-# 商品的删除——刘金周
+# 商品的删除
 @login_required
 @transaction.atomic
 def del_good(request, good_id):
@@ -187,7 +187,7 @@ def del_good(request, good_id):
     return redirect('/stores/index/0/')
 
 
-# 所有商品展示——刘金周
+# 所有商品展示
 @require_GET
 def all_goods(request):
     """
