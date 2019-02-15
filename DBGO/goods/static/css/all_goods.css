@@ -1,0 +1,48 @@
+.container{
+    width: 100%;
+    background-color: #3c3c3c;
+    background-image: url("/static/images/img/bg.png") ;
+    background-repeat: repeat-x;
+}
+.cloth{
+    width: 240px;
+    margin: 10px;
+    height: 400px;
+    float: left;
+    padding: 10px;
+    border: solid #333 2px;
+    font-weight: bold;
+}
+
+.cloth-img{
+    width: 200px;
+    margin: 10px;
+}
+
+.cloth-img img{
+    width: 200px;
+}
+
+.cloth .content{
+    text-align: center;
+    padding: 10px;
+}
+
+.content .hang{
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+
+.content .hang a {
+    text-decoration: none;
+    color: #df0027;
+}
+
+.goods-name1{
+    float: left;
+}
+
+.price{
+    float: right;
+}

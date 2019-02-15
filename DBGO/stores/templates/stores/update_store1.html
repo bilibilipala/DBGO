@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>修改店铺</title>
+{% endblock %}
+
+{% block css_and_js %}
+
+<link rel="stylesheet" href="/static/css/update_store1.css">
+
+{% endblock %}
+
+{% block content %}
+
+<div id="content" class="padTop">
+    <div class="acount_con clearfix">
+        <!--主体部分左侧内容-->
+        <div class="acount_l">
+            <span><img src="/static/images/main/pic_member_01.gif" alt="" /></span>
+            <dl class="ac_01">
+                <dd><a href="javascript:;">我的DBGO店铺</a></dd>
+                <dd><a href="javascript:;">交易订单</a></dd>
+                <dd><a href="javascript:;">新品发布</a></dd>
+                <dd><a href="javascript:;">购买记录</a></dd>
+                <dd><a class="cur" href="javascript:;">修改我的店铺</a></dd>
+                <dd><a href="javascript:;">待付款</a></dd>
+                <dd><a href="javascript:;">商品评价</a></dd>
+                <dd><a href="javascript:;">添加上架商品</a></dd>
+                <dd><a href="javascript:;">会员活动</a></dd>
+            </dl>
+        </div>
+
+        <!--主体部分右侧内容-->
+        <div class="auount_r">
+            <!--个人设置-->
+            <div class="acount_box">
+                <div class="ac_title">
+                    <cite>店铺设置 · Store Setting</cite>
+                </div>
+                <div class="ac_container my_information">
+                    <h4>请您放心填写，我们承诺妥善保管个人信息的隐私权。</h4>
+
+                    <div class="my_information_box">
+                        <form action="/stores/update_cover/{{store.id}}/" enctype="multipart/form-data" method="post">
+                             {% csrf_token %}
+
+                            <span class="btn  fileinput-button  ">
+                                <p style="margin-left: -100px"><b><i>店 &nbsp;铺&nbsp;封 &nbsp;面：</i></b></p>
+                                <div id="img_warp" style="position: relative ">
+
+                                    <div id="imgdiv" style="" >
+
+                                        <img src="/{{store.cover}}" alt="wwww">
+                                        <input type="file" name="cover" id="putfile">
+                                    </div>
+                                        <button id="up_img" class="submit">修改</button>
+                                </div>
+                            </span>
+                        </form>
+                        <form action="/stores/update_store/{{store.id}}/" method="post" id="regother" >
+                            {% csrf_token %}
+                            <table class="type_input">
+
+                                <tr>
+                                    <th><i>店 &nbsp;铺&nbsp;名 &nbsp;称：</i></th>
+                                    <td colspan="3">
+                                        <input type="text" class="input_large_ch" name="name" id="name" maxlength="30" value="{{store.name}}"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><i>店 &nbsp;铺&nbsp;介 &nbsp;绍：</i></th>
+                                    <td colspan="3">
+                                        <textarea class="form-control" name="intro" id="intro" cols="30" rows="7">{{store.intro}}</textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <div><button  class="btn-info"  href="back">返回</button></div>
+                                    </td>
+                                    <td>
+                                    <div><button  class="btn-primary" href="stores/update_store/{{store.id}}/">保存</button></div>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="myBrand">&nbsp;</a>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>用户界面</title>
+
+{% endblock %}
+
+{% block css_and_js %}
+<link rel="stylesheet" href="/static/css/add_goods1.css">
+{% endblock %}
+
+{% block content %}
+
+<div id="content" class="padTop">
+    <div class="acount_con clearfix">
+        <!--主体部分左侧内容-->
+        <div class="acount_l">
+            <span><img src="/static/images/main/pic_member_01.gif" alt="" /></span>
+            <dl class="ac_01">
+                <dd><a href="javascript:;">我的DBGO店铺</a></dd>
+                <dd><a href="javascript:;">交易订单</a></dd>
+                <dd><a href="javascript:;">新品发布</a></dd>
+                <dd><a href="javascript:;">购买记录</a></dd>
+                <dd><a  href="javascript:;">修改我的店铺</a></dd>
+                <dd><a href="javascript:;">待付款</a></dd>
+                <dd><a href="javascript:;">商品评价</a></dd>
+                <dd><a class="cur" href="javascript:;">添加上架商品</a></dd>
+                <dd><a href="javascript:;">会员活动</a></dd>
+            </dl>
+        </div>
+
+        <!--主体部分右侧内容-->
+        <div class="auount_r">
+            <!--添加上架商品-->
+            <div class="acount_box">
+                <div class="ac_title">
+                    <cite>修改商品 · Update The Goods</cite>
+                </div>
+                <div class="ac_container my_information">
+                    <h4>我们希望了解您添加商品信息，以便为您提供更加贴心的服务体验。</h4>
+                    <div class="my_information_box">
+                        <form action="/goods/update_good/{{good.id}}/" id="extendedreg" method="post">
+                            {% csrf_token %}
+                            <table class="type_input">
+
+                                <tr>
+                                    <th><i>商 &nbsp;品&nbsp;名 &nbsp;称：</i></th>
+                                    <td colspan="3">
+                                        <input type="text" class="input_large_ch" name="good_name" id="good_name" value="{{good.good_name}}" maxlength="30" placeholder="请输入您的上架商品名称"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><i>价 &nbsp;&nbsp; &nbsp;&nbsp; 格：</i></th>
+                                    <td colspan="3">
+                                        <input type="number" class="b_height input_large_ch" name="good_price" value="{{good.good_price}}" placeholder="请输入价格" />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th ><i>库 &nbsp;&nbsp; &nbsp;&nbsp; 存：</i></th>
+                                    <td>
+                                        <input type="number" class="waisline input_large_ch" name="good_stack"  placeholder="请输入商品的库存" value="{{good.good_stack}}"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><i>商 &nbsp;品&nbsp;介 &nbsp;绍：</i></th>
+                                    <td colspan="3">
+                                        <textarea class="form-control" name="good_desc" id="intro" cols="30" rows="7">{{good.good_desc}}</textarea>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><i>商 &nbsp;品&nbsp;种 &nbsp;类：</i></th>
+                                    <td>
+                                        <select name="type_name" class="select_normal" style="width:130px;">
+                                            <option value="衣服">衣服</option>
+                                            <option value="日用品">日用品</option>
+                                            <option value="鞋子">鞋子</option>
+                                            <option value="水果">水果</option>
+                                            <option value="科技产品">科技产品</option>
+
+                                        </select>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <th></th>
+                                    <td colspan="3"><button class="p_btn_s" type="submit">提交</button></td>
+                                </tr>
+
+
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

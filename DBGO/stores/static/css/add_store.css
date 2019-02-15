@@ -1,0 +1,180 @@
+.store-open{
+     width: 1200px;
+    height: 500px;
+    margin-top: 100px
+
+}
+.form-group{
+    /*width: 200px;*/
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+
+/*主体部分样式*/
+#content{
+	width:960px;
+	margin:0 auto;
+}
+.padTop{
+	padding-top:30px;
+}
+.acount_l{
+	width:110px;
+	float:left;
+}
+.acount_l span{
+	text-align: center;
+	display: block;
+}
+.ac_01{
+	padding-top:40px;
+}
+.acount_l dl dd{
+	height:17px;
+	margin-bottom: 8px;
+	text-align: center;
+	overflow: hidden;
+}
+.acount_l dl dd a{
+    color: #888888;
+    font-size: 12px;
+}
+.acount_l dl dd a.cur{
+	color:#333;
+}
+.acount_l dl dd a:hover{
+	color:#333;
+}
+
+/*主体部分右侧内容*/
+.auount_r{
+	width:834px;
+	float: right;
+}
+.acount_box{
+	margin-bottom: 40px;
+}
+.ac_title{
+	height:24px;
+	padding: 0 0 0 40px;
+	background: url(/static/images/main/pic_titles.gif) 0 1px no-repeat;
+	z-index: 5;
+}
+.ac_title cite{
+	height:23px;
+	font-size: 14px;
+	display: block;
+	border-bottom: 1px solid #555;
+	color:#333;
+}
+.ac_container{
+	padding:15px 0 15px 40px;
+}
+.my_information h4{
+	font-weight: normal;
+	color:#aaa;
+}
+h4{
+	font-size: 12px;
+}
+.my_information_box{
+	padding:10px 0;
+}
+input, select{
+	font-size: 12px;
+	border:1px solid #bbb;
+	color:#6c6c6c;
+	background: none;
+	background-color: #fff;
+	outline: none;
+}
+input{
+	vertical-align: middle;
+}
+table{
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.type_input th, .my_information .type_input td{
+	padding-top: 15px;
+}
+.type_input th{
+	text-align: right;
+}
+table th,table td{
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.type_input td{
+	text-align: left;
+}
+input.input_small{
+	width:12px !important;
+	border: none;
+	background: none;
+}
+.type_input td.sex label{
+	padding-left: 5px;
+	margin-right: 10px;
+}
+label{
+	cursor: default;
+}
+select.select_normal{
+	height: 22px;
+	padding:2px;
+	line-height: 18px;
+}
+option{
+	font-weight: normal;
+	display: block;
+	white-space: pre;
+	min-height: 1.2em;
+	padding:0 2px 1px;
+}
+input.input_large_en{
+	height:20px;
+	padding:0 0 0 2px;
+	line-height: 20px;
+}
+input.input_large_ch{
+	height:30px;
+	padding:0 0 0 5px;
+	line-height: 20px;
+}
+.c_purple{
+	color: #8E0C3A;
+}
+.tip{
+	cursor: pointer!important;
+}
+
+
+.p_btn_s{
+	width:93px;
+	height:28px;
+	padding:0 2px 0 2px;
+	font-size: 14px;
+	line-height: 28px;
+	border:0 none;
+	background: url(/static/images/main/bg_public_btn_bg.gif) no-repeat;
+	outline: none;
+}
+button{
+	color:#fff;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

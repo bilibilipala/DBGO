@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>所有商品</title>
+
+{% endblock %}
+
+{% block css_and_js %}
+<link rel="stylesheet" href="/static/css/all_goods.css">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+{% for good in goods %}
+
+    <div class="cloth">
+        <div class="cloth-img">
+            <a href="/goods/good_show/{{good.id}}"><img src="/static/images/cloth-img.jpg" >
+            </a>
+
+        </div>
+
+        <div class="content">
+
+            <div class="hang">
+                <a href="/goods/good_show/{{good.id}}" class="goods-name1">
+                    {{good.good_name}}
+                </a>
+            </div>
+            <div class="hang">
+                <div class="price">
+
+                    ￥{{good.good_price}}
+                </div>
+            </div>
+
+            <div class="hang">
+
+                <div class="pay">
+                    库存：{{good.good_stack}}
+                </div>
+            </div>
+            <div class="hang">
+                <div>
+                    {{good.good_desc}}
+                </div>
+            </div>
+
+            <div class="hang">
+                <a href="#">华柜首尔</a>
+                <div class="addr">广东&nbsp;广州</div>
+            </div>
+
+            <div class="hang">
+                <div class="pic_l"></div>
+                <div class="pic_ll"></div>
+                <div class="pic_r"></div>
+            </div>
+
+        </div>
+    </div>
+{% empty %}
+    <hr>
+    <h1>无数据</h1>
+{% endfor %}
+</div>
+{% endblock %}

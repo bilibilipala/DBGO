@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>注册店铺</title>
+{% endblock %}
+
+{% block css_and_js %}
+<link rel="stylesheet" href="/static/css/add_store.css">
+
+{% endblock %}
+
+{% block content %}
+
+
+<div id="content" class="padTop">
+    <div class="acount_con clearfix">
+        <!--主体部分左侧内容-->
+        <div class="acount_l">
+            <span><img src="/static/images/main/pic_member_01.gif" alt="" /></span>
+            <dl class="ac_01">
+                <dd><a class="cur"  href="javascript:;">我的DBGO店铺</a></dd>
+                <dd><a href="javascript:;">交易订单</a></dd>
+                <dd><a href="javascript:;">新品发布</a></dd>
+                <dd><a href="javascript:;">购买记录</a></dd>
+                <dd><a  href="javascript:;">修改我的店铺</a></dd>
+                <dd><a href="javascript:;">待付款</a></dd>
+                <dd><a href="javascript:;">商品评价</a></dd>
+                <dd><a href="javascript:;">添加上架商品</a></dd>
+                <dd><a href="javascript:;">会员活动</a></dd>
+            </dl>
+        </div>
+
+        <!--主体部分右侧内容-->
+        <div class="auount_r">
+            <!--添加上架商品-->
+            <div class="acount_box">
+                <div class="ac_title">
+                    <cite>添加我的店铺 · Add The Store</cite>
+                </div>
+                <div class="ac_container my_information">
+                    <h4>我们希望了解您添加店铺信息，以便为您提供更加贴心的服务体验。</h4>
+
+                    <div class="my_information_box">
+
+                        <form action="/stores/add_store/" method="post" enctype="multipart/form-data" id="regother" >
+                            {% csrf_token %}
+                            <table class="type_input">
+                                <tr>
+                                    <th><i>店 &nbsp;铺&nbsp;封 &nbsp;面：</i></th>
+                                    <td colspan="3">
+                                        <input type="file" class="form-control" name="cover" id="cover" placeholder="为您的小店选择个封面吧">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><i>店 &nbsp;铺&nbsp;名 &nbsp;称：</i></th>
+                                    <td colspan="3">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="您的店铺名字叫什么呢">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><i>店 &nbsp;铺&nbsp;介 &nbsp;绍：</i></th>
+                                    <td colspan="3">
+                                        <textarea  class="form-control" name="intro" id="intro" cols="30" rows="7" placeholder="介绍您的店铺吧"></textarea>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th></th>
+                                    <td colspan="3"><button class="p_btn_s" type="submit">提交</button></td>
+                                </tr>
+
+                            </table>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

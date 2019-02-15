@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>用户注册</title>
+
+{% endblock %}
+
+{% block css_and_js %}
+<link rel="stylesheet" href="/static/css/user_register.css">
+<script src="/static/js/app/user_register.js"></script>
+{% endblock %}
+
+{% block header %}
+<div id="header-wrap">
+    <div id="header">
+        <div class="form-horizontal" >
+            <a href="/shopsite/index/"><img class="logo" src="/static/images/log/logo_e.png" alt="logo"></a>
+            <ul class="heager_a">
+                <li>hi~</li>
+                <li><a href="/shopsite/user_login/">[请登录]</a>  </li>
+                <li><a href="/shopsite/user_register/">[免费注册]</a> </li>
+                <li><a href="#">MY有货</a> </li>
+                <li><a href="#">订单中心</a> </li>
+                <li><a href="#">客户服务</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="content-reg">
+    <img  class="login1" src="/static/images/log/login1.jpg" alt="">
+
+    <div id="setNumber-right">
+        <div id="setNumber-1">DBGO&nbsp注册</div>
+        <form id="setNumber-wrap" method="post" action="/shopsite/user_register/">
+            {% csrf_token %}
+            <div id="setNumber-2">
+                <p style="margin: 0">已注册可
+                    <a href="/shopsite/user_login/" style="color:black; font-weight: bolder ;text-decoration: none">直接登录</a>
+                </p>
+            </div>
+
+            <input placeholder="用户名" class="setNumber-3a" type="text"  name="username">
+            <div class="setNumber-tishi  setNumber-tishi1">
+                <p>用户名称要求唯一</p>
+            </div>
+            <input placeholder="请输入密码" name="password" class="setNumber-4a" type="password">
+            <div class="setNumber-tishi setNumber-tishi2">
+                <p>6-16个字符，可使用字母、数字、符号任意组合</p>
+            </div>
+            <input placeholder="请再次输入密码" name="confirm_pwd" class="setNumber-5a" type="password">
+            <div class="setNumber-tishi setNumber-tishi3">
+                <p>请再次输入您设置的密码</p>
+            </div>
+            <div id="setNumber-ts">
+                <span>安全强度</span>
+                <span class="mimaruo">弱</span>
+                <span class="mimazhong">中</span>
+                <span class="mimaqiang">强</span>
+            </div>
+            <input placeholder="验证码" name="code" class="setNumber-6a" type="text">
+            <div class="set-yanzm-wrap" style="display: block;">
+                <a href="" class="set-yanzm" onclick="change_code()"><img src="/shopsite/code/" alt="验证码" ></a>
+                <!--<a href="" onclick="change_code()">-->
+                    <!--换一个-->
+                <!--</a>-->
+            </div>
+{#            <div>#}
+{#                <Button  id="yanzheng" class="setNumberbtn" style="margin-top: 10px">获取验证码</Button>#}
+{#            </div>#}
+            <div class="setNumber-tishi setNumber-tishi4">
+                <p>请输入右方的验证码</p>
+            </div>
+            <div class="setNumber-7a" style="width: 280px">
+                <input value="" checked="checked" type="radio">
+                <span>我已阅读并同意</span>
+                <a href="http://www.yintai.com/help/#terms" style="color:black; font-weight: bolder ;text-decoration: none">
+                    《DBGO网用户注册服务协议》
+                </a>
+            </div>
+            <div class="setNumber-8a">
+                <Button  id="tijiao" class="setNumberbtn" style="margin-top: 10px">注册</Button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+

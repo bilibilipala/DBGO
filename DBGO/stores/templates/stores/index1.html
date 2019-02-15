@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>店铺首页</title>
+{% endblock %}
+
+{% block css_and_js %}
+<link rel="stylesheet" href="/static/css/index1.css">
+
+{% endblock %}
+
+{% block content %}
+
+<div id="content" class="padTop">
+    <div class="acount_con clearfix">
+        <!--主体部分左侧内容-->
+        <div class="acount_l">
+            <span><img src="/static/images/main/pic_member_01.gif" alt="" /></span>
+            <dl class="ac_01">
+                <dd><a class="cur"  href="javascript:;">我的DBGO店铺</a></dd>
+                <dd><a href="javascript:;">交易订单</a></dd>
+                <dd><a href="javascript:;">新品发布</a></dd>
+                <dd><a href="javascript:;">购买记录</a></dd>
+                <dd><a  href="javascript:;">修改我的店铺</a></dd>
+                <dd><a href="javascript:;">待付款</a></dd>
+                <dd><a href="javascript:;">商品评价</a></dd>
+                <dd><a href="javascript:;">添加上架商品</a></dd>
+                <dd><a href="javascript:;">会员活动</a></dd>
+            </dl>
+        </div>
+
+        <!--主体部分右侧内容-->
+        <div class="auount_r">
+            <!--添加上架商品-->
+            <div class="acount_box">
+                {{store.status}}
+                {% if store.status == 0 %}
+                <h1>您没有店铺,请创建店铺</h1>
+                <button><a href="/stores/add_store/">创建店铺</a></button>
+                {% else %}
+                <div class="ac_title">
+                    <cite>欢迎来到我的店铺 · {{store.name}}</cite>
+                </div>
+                <div class="ac_container my_information">
+                    <h4>我们希望了解您添加店铺信息，以便为您提供更加贴心的服务体验。</h4>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div id="index-all">
+
+                                    <!--店铺首页头部分-->
+                                    <div id="index-header">
+                                        <div class="store-name">
+                                            <div class="dropdown">
+                                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                                                        style="background-color: FloralWhite">
+                                                    {{store.name}}~~~
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu menu-status" aria-labelledby="dropdownMenu1">
+                                                    <li><a href="/stores/open_store/{{store.id}}">营业</a></li>
+                                                    <li><a href="/stores/close_store/{{store.id}}">歇业</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="store-change">
+                                            <ul>
+                                                {% if store.status == 1 %}
+                                                <li><a href="/stores/close_store/{{store.id}}/">营业中</a></li>
+                                                {% elif store.status == 2 %}
+                                                <li><a href="/stores/open_store/{{store.id}}"/>歇业中</a></li>
+                                                {% endif %}
+                                                <li><a href="/goods/add_good/{{store.id}}/">上架商品</a></li>
+                                                <li><a href="/stores/update_store/{{store.id}}/">修改店铺</a></li>
+                                                <li><a href="/stores/del_store/{{store.id}}/">删除店铺</a></li>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!--店铺介绍-->
+                                    <div class="jumbotron store-intro" style="background-color: white">
+                                        <img src="/{{store.cover}}" alt="">
+                                        <p class="s-intro">{{store.intro}}</p>
+                                        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button" style="color: FloralWhite">关注店铺</a></p>-->
+                                    </div>
+                                    <!--展示商品-->
+                                        {% for good in request.session.goods %}
+
+                                        <div class="cloth">
+                                            <div class="cloth-img">
+                                                <a href="/goods/good_show/{{good.id}}"><img src="/static/images/z17.jpg" >
+                                                </a>
+
+                                            </div>
+                                            <div class="content">
+
+                                                <div class="hang">
+                                                    <a href="/goods/good_show/{{good.id}}" class="goods-name1">
+                                                        {{good.good_name}}
+                                                    </a>
+                                                </div>
+                                                <div class="hang">
+                                                    <div class="price">
+
+                                                        ￥{{good.good_price}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="hang">
+
+                                                    <div class="pay">
+                                                        库存：{{good.good_stack}}
+                                                    </div>
+                                                </div>
+                                                <div class="hang">
+                                                    <a href="/goods/lower_good/{{good.id}}/" class="btn btn-danger">删除</a>
+                                                    <a href="/goods/update_good/{{good.id}}/" class="btn btn-primary">修改</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        {% empty %}
+                                        <hr>
+                                        <h1>无数据</h1>
+                                        {% endfor %}
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

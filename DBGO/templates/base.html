@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title></title>{% endblock %}
+    <script src="/static/js/lib/JQuery/jquery-2.2.4.js"></script>
+    <script src="/static/js/lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="/static/js/lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    {% block css_and_js %}
+
+    {% endblock %}
+</head>
+<body>
+{% block header %}
+
+
+<div id="header-wrap">
+    <div id="header">
+        <div class="dropdown dropdown-base">
+            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-tasks " style="margin-right: 2px;color: #8e8e8e ;margin-top: 7px"></span>DBGO 有货！ <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li class="dbgo">
+                  <a href="/shopsite/index/">DBGO!</a>
+                </li>
+                <li class="dbgo-boys">
+                  <a href="">DBGO!BOYS</a>
+                </li>
+                <li class="dbgo-girls">
+                  <a href="">DBGO!GIRLS</a>
+                </li>
+                <li class="Mars">
+                  <a href="">Mars</a>
+                </li>
+                <li class="dbgo-hood">
+                  <a href="">DBGOHOOD</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <ul class="heager_a">
+            <li>hi~</li>
+            {% if request.user.username %}
+            <li><span href="/shopsite/user_login/"></span>
+                {{request.user}}
+
+            </li>
+            <li><a href="/shopsite/user_logout/">[退出]</a> </li>
+
+
+            {% else %}
+
+
+
+            <li><a href="/shopsite/user_login/">[请登录]</a>  </li>
+            <li><a href="/shopsite/user_register/">[免费注册]</a> </li>
+            {% endif %}
+
+
+
+            <li><a href="/shopsite/user_self/" class="glyphicon glyphicon-list-alt">我的DBGO |</a> </li>
+            <li><a href="/shopsite/goods_car/" class="glyphicon glyphicon-heart">我的购物车 |</a> </li>
+            <li><a href="/stores/index/0/" class="glyphicon glyphicon-heart">我的店铺|</a> </li>
+            <li><a href="/stores/add_store/" class="glyphicon glyphicon-heart">我要开店|</a> </li>
+            <li><a href="" class="glyphicon glyphicon-envelope">消息 |</a> </li>
+            <li><a href="" class="glyphicon glyphicon-headphones">客户服务 |</a> </li>
+
+        </ul>
+
+    </div>
+
+    <div id="header1">
+        <div class="header-change">
+            <div class="header2">
+                <a href="/shopsite/index/"><img class="logo" src="/static/images/log/logo_e.png" alt="logo"></a>
+                <div class="search">
+                    <form action="//www.yohobuy.com/search" method="get" id="search-form">
+                        <input id="defaultsearch"  placeholder="萌奇文化">
+                        <!--<a class="search-btn" href="javascript:submitSearch();">搜索</a>-->
+                        <a class="search-btn" href="/goods/all_goods/">搜索</a>
+                    </form>
+                </div>
+            </div>
+
+
+            <div>
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active boys"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">男生<br/>BOYS</a></li>
+                <li role="presentation" class="girls"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">女生<br/>GIRLS</a></li>
+                <li role="presentation" class="kids"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">潮童<br/>KIDS</a></li>
+                <li role="presentation" class="life"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">创意生活<br/>LIFE STYLE</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="intro-info">
+                        <ul>
+
+                            <li><a href="">新品到着</a></li>
+                            <li><a href="">品牌一览</a></li>
+                            <li><a href="">服饰</a></li>
+                            <li><a href="">鞋履</a></li>
+                            <li><a href="">包袋</a></li>
+                            <li><a href="">配饰*其他</a></li>
+                            <li><a href="">逛</a></li>
+                            <li><a href="">SALE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    <div class="intro-info">
+                        <ul>
+
+                            <li><a href="">新品到着</a></li>
+                            <li><a href="">品牌一览</a></li>
+                            <li><a href="">服饰</a></li>
+                            <li><a href="">鞋履</a></li>
+                            <li><a href="">包袋</a></li>
+                            <li><a href="">配饰*其他</a></li>
+                            <li><a href="">逛</a></li>
+                            <li><a href="">SALE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    <div class="intro-info">
+                        <ul>
+
+                            <li><a href="">新品到着</a></li>
+                            <li><a href="">品牌一览</a></li>
+                            <li><a href="">服饰</a></li>
+                            <li><a href="">鞋履</a></li>
+                            <li><a href="">包袋</a></li>
+                            <li><a href="">配饰*其他</a></li>
+                            <li><a href="">逛</a></li>
+                            <li><a href="">SALE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="settings">
+                    <div class="intro-info">
+                        <ul>
+
+                            <li><a href="">新品到着</a></li>
+                            <li><a href="">品牌一览</a></li>
+                            <li><a href="">服饰</a></li>
+                            <li><a href="">鞋履</a></li>
+                            <li><a href="">包袋</a></li>
+                            <li><a href="">配饰*其他</a></li>
+                            <li><a href="">逛</a></li>
+                            <li><a href="">SALE</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+<div class="site-footer">
+    <div class="all-footer">
+        <div class="first-row">
+            <div class="center-centent">
+                <div class="left">
+                    <span class="left-icon"><img src="/static/images/zhengpin.png" alt="正品保障"></span>
+                    <span>100%正品保障</span>
+                </div>
+                <div class="left">
+                    <span class="left-icon"><img src="/static/images/qitian.png" alt="七天无理由退货"></span>
+                    <span>七天无理由退货</span>
+                </div>
+                <div class="left">
+                    <span class="left-icon"><img src="/static/images/kefu.png" alt="便捷在线客服"></span>
+                    <span>便捷在线客服</span>
+                </div>
+
+                <div class="right">
+                    <input value="订阅我们的邮件">
+                    <a href="#"><img src="/static/images/xin.png" alt="联系我们"></a>
+                </div>
+            </div>
+        </div>
+        <div class="first-row">
+            <div class="left">
+                <ul>
+                    <li>
+                        <p><span>新手专区</span></p>
+                        <p><a href="#">注册登录</a></p>
+                        <p><a href="#">购物结算</a></p>
+                        <p><a href="#">下单支付</a></p>
+                        <p><a href="#">收货评价</a></p>
+                    </li>
+                    <li>
+                        <p><span>会员中心</span></p>
+                        <p><a href="">会员制度</a></p>
+                        <p><a href="">会员优惠</a></p>
+                        <p><a href="">账户管理</a></p>
+                        <p><a href="">密码管理</a></p>
+                    </li>
+                    <li>
+                        <p><span>购物指南</span></p>
+                        <p><a href="">发票</a></p>
+                        <p><a href="">尺码对照</a></p>
+                        <p><a href="">尺码解读</a></p>
+                        <p><a href="">商品咨询</a></p>
+                    </li>
+                    <li>
+                        <p><span>支付方式</span></p>
+                        <p><a href="">在线支付</a></p>
+                        <p><a href="">货到付款</a></p>
+                        <p><a href="">分期支付</a></p>
+                        <p><a href="">优惠券、有货币</a></p>
+                    </li>
+                    <li>
+                        <p><span>配送方式</span></p>
+                        <p><a href="">配送说明</a></p>
+                        <p><a href="">运费说明</a></p>
+                        <p><a href="">验货签收</a></p>
+                        <p><a href="">收货样品</a></p>
+                    </li>
+                    <li>
+                        <p><span>售后服务</span></p>
+                        <p><a href="">退换货政策</a></p>
+                        <p><a href="">退换货流程</a></p>
+                        <p><a href="">投诉与建议</a></p>
+                        <p><a href="">在线客服</a></p>
+                    </li>
+                    <li>
+                        <p><span>APP常见问题</span></p>
+                        <p><a href="">IPhone版</a></p>
+                        <p><a href="">Android版</a></p>
+                        <p><a href="">wap版</a></p>
+                        <p><a href="">IPAD版</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-link">
+            <div class="first-row">
+                <div class="about-us">
+                    <div class="left-flag">
+                        <a class="govicon" href="http://www.jsdsgsxt.gov.cn/mbm/entweb/elec/certView.shtml?siteId=f2b6e3b8d18241afb8dd6cadf7f15406" target="_blank" rel="nofollow">
+                            <div class="govimg"></div>
+                        </a>
+                        <a href="https://ss.knet.cn/verifyseal.dll?sn=e14021832010046477dka7000000&amp;ct=df&amp;a=1&amp;pa=0.5902942178957805" target="_blank" rel="nofollow">
+                            <img src="//static.yohobuy.com/images/v3/icon/credit-flag3.png?imageView2/2/interlace/1/q/75">
+                        </a>
+                        <a href="http://www.isc.org.cn/" target="_blank" rel="nofollow">
+                            <img src="//static.yohobuy.com/images/v3/icon/isc2.png?imageView2/2/interlace/1/q/75">
+                        </a>
+                    </div>
+                        <p class="links">
+                            <a href="//www.yohobuy.com" rel="nofollow">返回首页</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/yohobuy.html" rel="nofollow">YOHO!BUY 有货</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/newpower.html" rel="nofollow">新力传媒</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/contact.html" rel="nofollow">联系我们</a>
+                            <span>|</span>
+                            <a href="//shop.yohobuy.com/settled" rel="nofollow">商家入驻</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/privacy.html" rel="nofollow">隐私条款</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/link.html" rel="nofollow">友情链接</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/brands">潮流品牌大全</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/cate">潮流品类大全</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/cpdq">潮流产品大全</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/news">潮流资讯</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/boys-t2">穿衣搭配(男生版)</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/girls-t2">穿衣搭配(女生版)</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/boys-t1001">潮流人气</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/boys-t4">潮流潮品</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/boys-t22">潮流视频</a>
+                            <span>|</span>
+                            <a class="police" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010502010132" rel="nofollow">苏公网安备 32010502010132号</a>
+                        </p>
+                    </div>
+                    <div class="copyright">
+                        <p></p>
+                        <p>
+                            CopyRight © 2007-2018 南京新与力文化传播有限公司
+                            <a class="rbg6" href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">苏ICP备09011225号</a>
+                            NewPower Co. 版权所有 经营许可证编号：苏B2-20120395
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+</body>
+</html>

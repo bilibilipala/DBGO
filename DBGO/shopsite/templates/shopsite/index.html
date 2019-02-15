@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>用户首页</title>
+{% endblock %}
+
+{% block css_and_js %}
+
+<!--<link rel="stylesheet" href="/static/css/user_register.css">-->
+<link rel="stylesheet" href="/static/css/index.css">
+<script src="/static/js/app/index.js"></script>
+
+{% endblock %}
+
+
+{% block content %}
+
+	<!-- 主体内容部分 -->
+<div id="main">
+	<!-- banner图 -->
+	<div id="slides" class="home_large">
+		<ul class="slides_container">
+			<li class="active">
+				<a href="/goods/all_goods/" title="The Luxer 三大品牌优雅入驻" target="_blank"><img src="/static/images/main/14724536481366856846.jpg" alt=""></a>
+			</li>
+			<li>
+				<a href="/goods/all_goods/" title="早秋新品上架 升级你的时尚衣橱" target="_blank"><img src="/static/images/main/1472192499290064243.jpg" alt=""></a>
+			</li>
+			<li>
+				<a href="/goods/all_goods/" title="反季清仓 1折惠" target="_blank"><img src="/static/images/main/1472192524203159249.jpg" alt=""></a>
+			</li>
+			<li>
+				<a href="/goods/all_goods/" title="品牌周  VERSACE 范思哲 “美杜莎”的极致诱惑 限时特惠3折起" target="_blank"><img src="/static/images/main/14721925351144022703.jpg" alt=""></a>
+			</li>
+			<li>
+				<a href="/goods/all_goods/" title="“镜”彩每时每刻 太阳 光学眼镜专场" target="_blank"><img src="/static/images/main/14721925661385436086.jpg" alt=""></a>
+			</li>
+			<li>
+				<a href="/goods/all_goods/" title="给您的孩子最好的一切 缤纷童装 新品上架" target="_blank"><img src="/static/images/main/1472192738615258967.jpg" alt=""></a>
+			</li>
+			<li>
+				<a href="/goods/all_goods/" title="行走天下 “箱”伴旅行 国际品牌Brookstone Travalling入驻美西" target="_blank"><img src="/static/images/main/14720277101291210920.jpg" alt=""></a>
+			</li>
+			<li>
+				<a href="/goods/all_goods/" title="Mzine新版上线" target="_blank"><img src="/static/images/main/1472198069657991884.jpg" alt=""></a>
+			</li>
+		</ul>
+		<a href="javascript:;" class="prev"></a>
+		<a href="javascript:;" class="next"></a>
+		<ul class="slides_list">
+			<li><a class="active" href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+		</ul>
+	</div>
+
+	<!-- 特别推荐 -->
+	<div class="weekly">
+		<div class="theme">
+			<div class="min_line"></div>
+			<p class="theme_n">Special Offer <br>特别推荐</p>
+		</div>
+		<div class="home_large">
+			<div class="float_l T1">
+				<a href="javascript:;" target="_blank" title="大牌直降 Dsquared2/Dolce&Gabbana"><img src="/static/images/main/14721927881508653994.jpg" alt="大牌直降 Dsquared2/Dolce&Gabbana" width="316" height="190"></a>
+				<a class="mar_t" href="javascript:;" target="_blank" title="潮牌精选 Philipp Plein/Versace"><img src="/static/images/main/1472192798625957714.jpg" alt="潮牌精选 Philipp Plein/Versace" width="316" height="190"></a>
+			</div>
+			<div class="float_l T2">
+				<a href="javascript:;" target="_blank" title="每日新品推荐 New Arrivals"><img src="/static/images/main/14721927921366377851.jpg" alt="每日新品推荐 New Arrivals" width="316" height="386"></a>
+			</div>
+			<div class="float_l T3">
+				<a href="javascript:;" target="_blank" title="直通欧美 款式价格同步专柜"><img src="/static/images/main/14721927951532571461.jpg" alt="直通欧美 款式价格同步专柜" width="316" height="190"></a>
+				<a class="mar_t" href="javascript:;" target="_blank" title="国内现货 海外直采 包服鞋配2折起"><img src="/static/images/main/1472192801783479587.jpg" alt="国内现货 海外直采 包服鞋配2折起" width="316" height="190"></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 编辑推荐 -->
+	<div class="weekly">
+		<div class="theme">
+			<div class="min_line"></div>
+			<p class="theme_n">Editor's Pick <br>编辑推荐</p>
+		</div>
+		<div class="home_large">
+			<div class="float_l T1">
+				<a href="javascript:;" target="_blank" title="换季只需换5件 时髦又经济的方法在这里"><img src="/static/images/main/1472610217624898386.jpg" alt="换季只需换5件 时髦又经济的方法在这里" width="316" height="190"></a>
+				<a class="mar_t" href="javascript:;" target="_blank" title="优雅平底鞋 舒适与美貌兼备"><img src="/static/images/main/147219297317525132.jpg" alt="优雅平底鞋 舒适与美貌兼备" width="316" height="190"></a>
+			</div>
+			<div class="float_l T2">
+				<a href="javascript:;" target="_blank" title="初秋最潮夹克 秋风起，该买外套啦"><img src="/static/images/main/1472192911613463009.jpg" alt="初秋最潮夹克 秋风起，该买外套啦" width="316" height="386"></a>
+			</div>
+			<div class="float_l T3">
+				<a href="javascript:;" target="_blank" title="卫衣永远不嫌多 百搭时髦潮人穿的都在这"><img src="/static/images/main/14721929281887482942.jpg" alt="卫衣永远不嫌多 百搭时髦潮人穿的都在这" width="316" height="190"></a>
+				<a class="mar_t" href="javascript:;" target="_blank" title="男神都是衬衫控 精选男士必备衬衫"><img src="/static/images/main/1472192989510490887.jpg" alt="男神都是衬衫控 精选男士必备衬衫" width="316" height="190"></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 男仕精选 -->
+	<div class="weekly">
+		<div class="theme">
+			<div class="min_line"></div>
+			<p class="theme_n">For Him  <br>男仕精选</p>
+		</div>
+		<div class="home_large">
+			<div class="float_l T1">
+				<a href="javascript:;" target="_blank" title="单西/衬衣 商务休闲两相宜"><img src="/static/images/main/147219306197406483.jpg" alt="单西/衬衣 商务休闲两相宜" width="316" height="190"></a>
+				<a class="mar_t" href="javascript:;" target="_blank" title="休闲鞋/板鞋 定义足下新趋势"><img src="/static/images/main/14721930701636658842.jpg" alt="休闲鞋/板鞋 定义足下新趋势" width="316" height="190"></a>
+			</div>
+			<div class="float_l T2">
+				<a href="javascript:;" target="_blank" title="换季新宠 早秋新品驾到 Off White/Thom Browne/Dior"><img src="/static/images/main/14721930641332276414.jpg" alt="换季新宠 早秋新品驾到 Off White/Thom Browne/Dior" width="316" height="386"></a>
+			</div>
+			<div class="float_l T3">
+				<a href="javascript:;" target="_blank" title="短T/POLO 抓住夏日的尾巴"><img src="/static/images/main/14721930671490581560.jpg" alt="短T/POLO 抓住夏日的尾巴" width="316" height="190"></a>
+				<a class="mar_t" href="javascript:;" target="_blank" title="包袋/配饰 背包/钱夹/腰带 质男必藏"><img src="/static/images/main/14721930731814600240.jpg" alt="包袋/配饰 背包/钱夹/腰带 质男必藏" width="316" height="190"></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 女士精选 -->
+	<div class="weekly">
+		<div class="theme">
+			<div class="min_line"></div>
+			<p class="theme_n">For Her  <br>女士精选</p>
+		</div>
+		<div class="home_large">
+			<div class="float_l T1">
+				<a href="javascript:;" target="_blank" title="裙装/连体衫 一件穿出无龄吸引力"><img src="/static/images/main/1472193076899104067.jpg" alt="裙装/连体衫 一件穿出无龄吸引力" width="316" height="190"></a>
+				<a class="mar_t" href="javascript:;" target="_blank" title="草编鞋/便鞋 舒适百搭 让你爱不释手"><img src="/static/images/main/14721930851388387672.jpg" alt="草编鞋/便鞋 舒适百搭 让你爱不释手" width="316" height="190"></a>
+			</div>
+			<div class="float_l T2">
+				<a href="javascript:;" target="_blank" title="衣橱焕新 秋季新品精选 Stella McCartney/MSGM/Kenzo"><img src="/static/images/main/14721930791059327531.jpg" alt="衣橱焕新 秋季新品精选 Stella McCartney/MSGM/Kenzo" width="316" height="386"></a>
+			</div>
+			<div class="float_l T3">
+				<a href="javascript:;" target="_blank" title="链条包/挂饰 配饰时髦小挂饰 “包”你有型"><img src="/static/images/main/1472193082155359211.jpg" alt="链条包/挂饰 配饰时髦小挂饰 “包”你有型" width="316" height="190"></a>
+				<a class="mar_t" href="javascript:;" target="_blank" title="钱夹/墨镜 总有一款属于你的时尚品味"><img src="/static/images/main/14721930871844416251.jpg" alt="钱夹/墨镜 总有一款属于你的时尚品味" width="316" height="190"></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 正被选购 -->
+	<div class="weekly">
+		<div class="theme" style="margin:10px 0 0 0;">
+			<div class="min_line"></div>
+			<p class="theme_n">BEING SOLD  <br>正被选购</p>
+		</div>
+		<div id="m_hot">
+			<div class="cart_prev"><a href="javascript:;" class="m_prev"></a></div>
+			<div class="cart_next"><a href="javascript:;" class="m_next"></a></div>
+			<ul class="clearfix" id="hot_pro" style="margin:0; padding:0; width:2880px; position:absolute;">
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Stella McCartney 斯特拉·麦卡特尼 涤纶 女士 手提包" target="_blank">
+						<img src="/static/images/main/q-097495-1.jpg" alt="Stella McCartney 斯特拉·麦卡特尼 涤纶 女士 手提包">
+						<p>Stella McCartney <br>斯特拉·麦卡特尼</p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Roger Vivier 罗杰·维维亚 漆皮 女士 芭蕾舞鞋" target="_blank">
+						<img src="/static/images/main/q-098567-1.jpg" alt="Roger Vivier 罗杰·维维亚 漆皮 女士 芭蕾舞鞋">
+						<p>Roger Vivier  <br>罗杰·维维亚</p>
+						<span class="c_gray">已加入购物袋</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Tod's 托德斯 小山羊皮 女士 乐福/莫卡辛鞋" target="_blank">
+						<img src="/static/images/main/q-098717-1.jpg" alt="Tod's 托德斯 小山羊皮 女士 乐福/莫卡辛鞋">
+						<p>Tod's   <br>托德斯</p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Dolce&Gabbana 杜嘉班纳 牛皮 女士 单肩包/手提包" target="_blank">
+						<img src="/static/images/main/q-100062-1.jpg" alt="Dolce&Gabbana 杜嘉班纳 牛皮 女士 单肩包/手提包">
+						<p>Dolce&Gabbana <br>杜嘉班纳</p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Isabel Marant 伊莎贝尔·玛兰 秋冬新款 聚酯纤维 女士 单肩包" target="_blank">
+						<img src="/static/images/main/q-100643-1.jpg" alt="Isabel Marant 伊莎贝尔·玛兰 秋冬新款 聚酯纤维 女士 单肩包">
+						<p>Isabel Marant <br>伊莎贝尔·玛兰</p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Burberry 博柏利 经典格纹山羊绒围巾" target="_blank">
+						<img src="/static/images/main/q-026282-1.jpg" alt="Burberry 博柏利 经典格纹山羊绒围巾">
+						<p>Burberry <br>博柏利</p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Gucci 古驰 板材 女士 太阳眼镜" target="_blank">
+						<img src="/static/images/main/q-031810-1.jpg" alt="Gucci 古驰 板材 女士 太阳眼镜">
+						<p>Gucci <br>古驰</p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Prada 普拉达 牛皮 女士 系带鞋" target="_blank">
+						<img src="/static/images/main/q-041323-1.jpg" alt="Prada 普拉达 牛皮 女士 系带鞋">
+						<p>Prada <br>普拉达</p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Salvatore Ferragamo 菲拉格慕 牛皮 女士 高筒靴" target="_blank">
+						<img src="/static/images/main/q-045393-1.jpg" alt="Salvatore Ferragamo 菲拉格慕 牛皮 女士 高筒靴">
+						<p>Salvatore Ferragamo <br>菲拉格慕</p>
+						<span class="c_gray">已被购买</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Armani Jeans 阿玛尼牛仔 Armani Jeans 羊驼毛混纺 女士 长袖针织衫" target="_blank">
+						<img src="/static/images/main/q-048912-1.jpg" alt="Armani Jeans 阿玛尼牛仔 Armani Jeans 羊驼毛混纺 女士 长袖针织衫">
+						<p>Armani Jeans <br>阿玛尼牛仔</p>
+						<span class="c_gray">已加入购物袋</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="MCM  限量款 牛皮 女士 双肩包" target="_blank">
+						<img src="/static/images/main/q-049750-1.jpg" alt="MCM  限量款 牛皮 女士 双肩包">
+						<p>MCM <br></p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Gucci 古驰 牛皮 男士 皮带" target="_blank">
+						<img src="/static/images/main/q-051558-1.jpg" alt="Gucci 古驰 牛皮 男士 皮带">
+						<p>Gucci <br>古驰</p>
+						<span class="c_gray">已加入购物袋</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="VERSACE JEANS 范思哲牛仔 Versace Jeans 聚酯纤维混纺 女士 长袖T恤" target="_blank">
+						<img src="/static/images/main/q-058220-1.jpg" alt="VERSACE JEANS 范思哲牛仔 Versace Jeans 聚酯纤维混纺 女士 长袖T恤">
+						<p>VERSACE JEANS <br>范思哲牛仔</p>
+						<span class="c_gray">已加入购物袋</span>
+					</a>
+				</li>
+				<li style="overflow:hidden; float:left; width:160px; height:260px;">
+					<a href="javascript:;" title="Kenzo 高田贤三 全棉 16岁少年 卫衣" target="_blank">
+						<img src="/static/images/main/q-059825-1.jpg" alt="Kenzo 高田贤三 全棉 16岁少年 卫衣">
+						<p>Kenzo <br>高田贤三</p>
+						<span class="c_gray">已加入收藏</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 时尚专题推荐 -->
+	<div class="editor_c">
+		<div class="theme" style="margin:20px 0 11px 0;">
+			<div class="min_line"></div>
+			<p class="theme_n">M TRENDS  <br>时尚专题推荐</p>
+		</div>
+		<div class="home_large">
+			<div class="mz_banner">
+				<div class="float_l T1">
+					<a style="position:relative;" href="javascript:;" target="_blank" title="时装精的穿搭从来不按规则出牌">
+						<img src="/static/images/main/14728109841577613510.jpg" alt="时装精的穿搭从来不按规则出牌" width="316">
+						<p class="mz_title">
+							<span>时装精的穿搭从来不按规则出牌</span>
+						</p>
+					</a>
+				</div>
+				<div class="float_l T2">
+					<a style="position:relative;" class="mar_t" href="javascript:;" target="_blank" title="韩孝周美成这样怪不得迷倒二硕">
+						<img src="/static/images/main/14727902431398231895.jpg" alt="韩孝周美成这样怪不得迷倒二硕" width="316">
+						<p class="mz_title">
+							<span>韩孝周美成这样怪不得迷倒二硕</span>
+						</p>
+					</a>
+				</div>
+				<div class="float_l T3">
+					<a style="position:relative;" href="javascript:;" target="_blank" title="初秋帅气搭配，少不了夹克潮流！">
+						<img src="/static/images/main/147271062259252114.jpg" alt="初秋帅气搭配，少不了夹克潮流！" width="316">
+						<p class="mz_title">
+						<span>初秋帅气搭配，少不了夹克潮流！</span>
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="margin-top:14px;">
+		<a href="javascript:;" target="_blank" title="夏季刊清凉上线">
+			<img src="/static/images/main/mzine2.jpg" alt="夏季刊清凉上线">
+		</a>
+	</div>
+
+	<!-- 体验更多 -->
+	<div class="editor_c">
+		<div class="theme" style="margin:16px 0 17px 0;">
+			<div class="min_line"></div>
+			<p class="theme_n">SUBSCRIBE & DOWNLOAD <br>体验更多</p>
+		</div>
+		<div class="home_large">
+			<div class="mz_banner">
+				<div class="float_l T1">
+					<a href="javascript:;" target="_blank" title="注册美西会员">
+						<img src="/static/images/main/nb01.jpg" alt="注册美西会员" width="316">
+					</a>
+				</div>
+				<div class="float_l T2">
+					<img src="/static/images/main/nb02.jpg" alt="Mzine iPad 最潮流资讯" width="316">
+					<div class="index_russ">
+						<form onsubmit="return false">
+							<div class="float_l" style="margin-left:40px;">
+								<input id="rssIn" class="txt" type="text" value="请填写您的E-mail">
+								<button class="butt">即可订阅</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="float_l T3">
+					<a class="mar_t" href="javascript:;" target="_blank" title="美西时尚">
+						<img src="/static/images/main/ewm_indexMid1.jpg" alt="美西时尚" width="316">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

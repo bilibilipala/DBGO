@@ -1,0 +1,124 @@
+
+
+#login-all{
+    width: 319px;
+    height: 520px;
+    border:solid 1px black ;
+    /*border-radius: 10px;*/
+    margin-left: 1000px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.log-input{
+    width: 270px;
+    height: 38px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding-left: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+.log-input1{
+
+    width: 100px;
+    height: 38px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.log-tishi{
+    margin-left: 20px;
+    color: #CCCCCC;
+}
+
+#code-img{
+    width: 100px;
+    height: 40px;
+    float: right;
+    margin-right: 70px;
+    margin-top: 6px;
+}
+
+.log-tit{
+    background-color: black;
+
+}
+.log-tit a{
+    text-decoration: none;
+    color: white;
+}
+.log-tit a{
+    /*width: 120px;*/
+    /*height: 50px;*/
+    margin-left: 33px;
+}
+
+.setNumber-8a{
+    width: 262px;height: 40px;
+    padding-left: 8px;
+}
+.setNumber-8a .login-btn{
+    width: 270px;height: 40px;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    background: #ee120b;
+    font-size: 16px;
+    color: #fff;
+    border-radius:3px ;
+    margin-left: 10px;
+}
+
+#logNumber-pic{
+    width: 280px;height: 200px;
+    position: relative;
+}
+#logNumber-pic .img1{
+    position: absolute;
+    top: 20px;left: 80px;
+}
+#logNumber-pic .img2{
+    position: absolute;
+    top: 0;left: 145px;
+    display: none;
+}
+#logNumber2-con{
+    text-align: center;
+    height: 50px;line-height: 50px;
+    padding-top: 30px;
+}
+
+/*.lod-er{*/
+    /*position: absolute;*/
+    /*top: -25px;*/
+    /*left: 360px;*/
+/*}*/
+
+.self-login{
+    margin-left: 15px;
+    margin-top: 10px;
+
+}
+.self-login .public{
+    color: #ee120b;
+    font-size: 12px;
+}
+.self-login .forget{
+    color: #888888;
+    margin-left: 20px;
+}
+
+
+.setNumber-9a{width: 250px;height: 24px;margin-top:10px;padding-left: 60px;}
+.setNumber-9a .setNumber-9aa{background: #fff;width: 220px;height: 24px;color: #888888;}
+.setNumber-10a{padding-left: 15px;}
+.setNumber-10a li{float: left;padding: 0 5px;cursor: pointer; list-style: none}
+.setNumber-10a span{float: left;}
+
+#logNumber-con2{width: 260px;height: 30px;padding-left: 60px;}
+#logNumber-con2 span a{display: block;float: left;margin: 0 5px;font-size: 14px; text-decoration: none ;color: #888888}
+#logNumber-con2 span a:hover{color: #ee120b;}
+#logNumber-con3{width: 250px;height: 20px;padding-left: 70px;}
+#logNumber-con3 p{display: block;width: 160px;height: 20px;line-height: 20px;border: 1px solid #ee120b;color: #ee120b;text-align: center;}

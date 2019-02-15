@@ -1,0 +1,133 @@
+#header-wrap{
+    /*height: 1000px;*/
+    width: 1200px;
+    margin-left: 100px;
+}
+
+#header{
+    width: 1200px;
+    height: 60px;
+    border-bottom: solid 1px black;
+    margin-top: 20px;
+}
+
+.logo{
+    margin-left: 100px;
+}
+
+.heager_a{
+    list-style: none;
+
+    /*background-color: #7c7272;*/
+    width: 600px;
+    height: 55px;
+    float: right;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
+.heager_a a{
+    text-decoration: none;
+    color: #3A3A3A;
+
+
+}
+.heager_a a:hover{
+    color: #6E6E6E;
+}
+
+.heager_a li{
+    /*width: 100px;*/
+    height: 55px;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+    display: block;
+}
+
+#setNumber-right{
+    /*float: right;*/
+    width: 320px;
+    height: 460px;
+    border:solid 1px black ;
+    /*border-radius: 10px;*/
+    margin-left: 1000px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.content-reg{
+
+    width: 1200px;
+    height: 600px;
+    margin-top: 100px;
+}
+
+.login1{
+    width: 800px;
+    height: auto;
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+#setNumber-1{
+    width: 320px;
+    height: 44px;
+    background: black;
+    font:16px/44px '黑体';
+    color:#fff;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+#setNumber-wrap{
+    width: 280px;
+    height: 415px;
+    padding: 0 20px;
+    position: relative;
+}
+#setNumber-2{
+    float: right;
+    line-height: 50px;
+}
+#setNumber-wrap .setNumber-3a{
+    width: 270px;height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    outline-color: #4F4F4F;
+    padding-left: 8px;
+}
+
+.setNumber-tishi{
+    width: 270px;
+    height: 22px;
+    line-height:22px;
+    color: #ccc;}
+
+.setNumber-tishi1{
+    color: #ccc;
+}
+
+#setNumber-wrap .setNumber-4a{width: 270px;height: 38px;border: 1px solid #ccc;border-radius: 2px;font-size: 14px;outline-color: black;padding-left: 8px;}
+#setNumber-wrap .setNumber-5a{width: 270px;height: 38px;border: 1px solid #ccc;border-radius: 2px;font-size: 14px;outline-color: black;padding-left: 8px;}
+#setNumber-wrap .setNumber-6a{width: 100px;height: 38px;border: 1px solid #ccc;border-radius: 2px;font-size: 14px;outline-color: black;padding-left: 8px;}
+#setNumber-wrap .setNumber-8a{width: 262px;height: 40px;padding-left: 4px;}
+#setNumber-wrap .setNumber-8a button{width: 270px;height: 40px;display: block;line-height: 40px;text-align: center;background: #ee120b;font-size: 16px;color: #fff;margin-top: 25px;border-radius:3px ;}
+#setNumber-ts{position: absolute;padding-top: 3px;top:155px;display: none;}
+#setNumber-ts span{display:block;float:left;margin-right:5px;line-height: 16px;text-align: center;}
+#setNumber-ts .mimaruo{width: 30px;height: 16px;background: #ccc;margin-right:2px;}
+#setNumber-ts .mimazhong{width: 30px;height: 16px;background: #ccc;margin-right:2px;}
+#setNumber-ts .mimaqiang{width: 30px;height: 16px;background: #ccc;}
+.set-yanzm-wrap{
+    width: 150px;height: 38px;
+    /*border: 1px solid #fff;*/
+    position: absolute;
+    left:130px;top:235px;}
+/*.set-yanzm{width:88px;height: 36px;line-height: 38px;display: block;float: left;margin-right: 10px;border: 1px solid #999;}*/
+/*.set-yanzm-wrap a{width: 48px;line-height: 36px;float: left;text-align: center;border: 1px solid #999;}*/
+
+
+
