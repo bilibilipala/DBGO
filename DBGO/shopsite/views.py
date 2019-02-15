@@ -18,7 +18,7 @@ from . import models
 from . import utils
 
 
-# 首页——柴润墨
+# 首页
 def index(request):
     """
     用户首页
@@ -28,7 +28,7 @@ def index(request):
     return render(request, 'shopsite/index.html')
 
 
-# 用户登录——柴润墨
+# 用户登录
 @transaction.atomic
 def user_login(request):
     """
@@ -125,7 +125,7 @@ def user_login(request):
                 return render(request, 'shopsite/user_login.html', {'msg': '用户名或密码错误'})
 
 
-# 手机号登录——刘金周
+# 手机号登录
 def phone_login(request):
     """
     使用手机号验证登录
@@ -144,7 +144,7 @@ def phone_login(request):
     return redirect('/shopsite/user_self/')
 
 
-# 用户退出——柴润墨
+# 用户退出
 @login_required
 def user_logout(request):
     """
@@ -159,7 +159,7 @@ def user_logout(request):
         return redirect('/shopsite/index')
 
 
-# 注册——柴润墨
+# 注册
 @transaction.atomic
 def user_register(request):
     """
@@ -193,7 +193,7 @@ def user_register(request):
             return render(request, 'shopsite/user_login.html',)
 
 
-# 个人信息展示界面——刘金周
+# 个人信息展示界面
 @require_GET
 @login_required
 def user_self(request):
@@ -217,7 +217,7 @@ def user_self(request):
     return render(request, 'shopsite/user_self.html', {'year': year, 'month': month, 'day': day})
 
 
-# 用户修改界面——刘金周
+# 用户修改界面
 @login_required
 @transaction.atomic
 def update_user_self(request):
@@ -253,7 +253,7 @@ def update_user_self(request):
         return redirect('/shopsite/user_self/')
 
 
-# 修改个人密码——王新华
+# 修改个人密码
 @login_required
 @transaction.atomic
 def update_user_password(request):
@@ -282,7 +282,7 @@ def update_user_password(request):
             return redirect('/shopsite/user_self/')
 
 
-# 修改头像——王新华
+# 修改头像
 @login_required
 @transaction.atomic
 def update_user_header(request):
@@ -306,7 +306,7 @@ def update_user_header(request):
     return redirect('/shopsite/user_self/')
 
 
-# 验证码——刘金周
+# 验证码
 def code(request):
     """
     生成验证码
@@ -328,7 +328,7 @@ def send_msg(request, phone):
     return HttpResponse(p_code)
 
 
-# 购物车界面——王兴华
+# 购物车界面
 @login_required
 def goods_car(request):
     """
@@ -340,7 +340,7 @@ def goods_car(request):
     return render(request, 'shopsite/goods_car.html', {'shopcarts': shopcarts})
 
 
-# 删除购物车的商品——王兴华
+# 删除购物车的商品
 @login_required
 @transaction.atomic
 def cancel_buy(request, shopcart_id):
